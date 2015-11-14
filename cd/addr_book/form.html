@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>填写信息</title>
+</head>
+  <body align="center" background="/site_media/02.gif"  >
+    <p><h1>输入内容</h1></p>
+    <a href="http://127.0.0.1:8000/">返回首页</a>
+  </body>
+</html>
+
+<form method="post">
+<table border=1 align="center" background="/site_media/3.gif"> 
+  <tr><td>作者<input name="name" type="text"></td></tr>
+  <tr><td>书名<input name="number" type="text"></td></tr>
+  <tr><td>作者性别<input name="sex" type="radio" value="M"> 男 <input name="sex" type="radio" value="F"> 女 </td></tr>
+  <tr><td>出版日期<input name="phone" type="text"></td></tr>
+  <tr><td>价格<input name="QQ" type="text"></td></tr>
+  <tr><td>作者邮箱<input name="email" type="text"></td></tr>
+  <tr><td>出版社<input name="address" type="text"></td></tr>
+  <tr><td>语言<input name="birth" type="text"></td></tr>
+  <tr><td><input type="submit" value="保存"> <input type="reset" value="重填"></td></tr>
+ </tr>
+</table>
+</form>
+<table border=1 align="center" background="/site_media/3.gif">
+ <tr>
+  <th>作者</th><th>书名</th><th>作者性别</th><th>出版日期</th><th>价格</th><th>作者邮箱</th><th>出版社</th><th>语言</th>
+ </tr>
+{% for people in people_list %}
+ <tr>
+  <td>{{ people.name }}</td>
+  <td>{{ people.number }}</td>
+  <td>{% if people.sex %} 男 {% else %} 女 {% endif %}</td>
+  <td>{{ people.phone }}</td>
+  <td>{{ people.QQ }}</td>
+  <td>{{ people.email }}</td>
+  <td>{{ people.address }}</td>
+  <td>{{ people.birth }}</td>
+ </tr>
+
+{% endfor %}
+</table>

@@ -1,0 +1,24 @@
+<html>
+<title>查看书目</title>
+<body align="center" background="/site_media/02.gif"  ><a href="http://127.0.0.1:8000/">返回首页</a></body>
+<form method="post"><table align="center">
+<tr><td>搜索书目<input name="search" type="text" value={{people.name}} ><input type="submit" value="确定"></td></tr>
+</form>
+<table border=1 align="center" background="/site_media/3.gif">
+ <tr>
+  <th>作者</th><th>书名</th><th>作者性别</th><th>出版日期</th><th>价格</th><th>作者Email</th><th>出版社</th><th>语言</th>
+ </tr>
+ <tr>
+  <td>{{ people.name }}</td>
+  <td>{{ people.number }}</td>
+  <td>{% if people.sex %} 男 {% else %} 女 {% endif %}</td>
+  <td>{{ people.phone }}</td>
+  <td>{{ people.QQ }}</td>
+  <td>{{ people.email }}</td>  
+  <td>{{ people.address }}</td>
+  <td>{{ people.birth }}</td>
+  <td><a href="http://127.0.0.1:8000/delete/?id={{people.id}}">删除</a>
+  <a href="http://127.0.0.1:8000/update/?id={{people.id}}">修改</a></td>
+ </tr>
+</table>
+</html>
