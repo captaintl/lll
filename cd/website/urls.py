@@ -15,4 +15,4 @@ urlpatterns = patterns('',
     url(r'^delete',delete),
     url(r'^update',update)
 )
-#lalala
+#lala

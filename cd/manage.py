@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-#xsfdnbzfhb
+#xsf
 import os
 import sys
 
